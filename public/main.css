@@ -1,0 +1,47 @@
+button {
+  height: 200px;
+  width: 200px;
+  border: 15px solid black;
+}
+
+button:focus {
+  outline: none;
+}
+
+#board {
+  margin-top: 5%;
+  padding: 0px;
+}
+
+#red, #green {
+  margin: auto;
+}
+
+#blue {
+  background-color: blue;
+  background: linear-gradient(135deg, blue, darkblue);
+  margin-left: -5px;
+  border-bottom-right-radius: 75px;
+}
+
+#orange {
+  background-color: orange;
+  background: linear-gradient(135deg, orange, darkorange);
+  border-bottom-left-radius: 75px;
+}
+
+#green {
+  background-color: green;
+  background: linear-gradient(135deg, green, darkgreen);
+  margin-left: -5px;
+  border-top-right-radius: 75px;
+}
+
+#red {
+  background-color: red;
+  background: linear-gradient(135deg, red, darkred);
+  border-top-left-radius: 75px;
+}
+
+
+/* Controls */
