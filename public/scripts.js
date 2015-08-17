@@ -42,7 +42,11 @@ window.onload = function() {
   var createNewSeq = function () {
 
     // computer does the sequence and stores it in a new variable
-    // every time it runs it adds another to the sequence 
+
+    // randomly select from allButtons
+
+
+    // every time it runs it adds another to the sequence
 
 
   };
