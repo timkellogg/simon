@@ -41,13 +41,19 @@ window.onload = function() {
 
   var createNewSeq = function () {
 
-    // computer does the sequence and stores it in a new variable
+    // play old sequence
+    sequence.forEach(function(element) {
+      element.click();
+      element.addEventListener("end", function() {
+        return;
+      });
+    });
 
     // randomly select from allButtons
+    var nextAudio = sequence.randEl();
 
-
-    // every time it runs it adds another to the sequence
-
+    // add that element to sequence
+    sequence.push(nextAudio);
 
   };
 
