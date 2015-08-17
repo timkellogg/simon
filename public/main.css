@@ -43,5 +43,37 @@ button:focus {
   border-top-left-radius: 75px;
 }
 
-
 /* Controls */
+
+#board-controls {
+  margin-top: -140px;
+}
+
+#board-controls button {
+  width: 150px;
+  height: 50px;
+  border: 0px;
+  margin-top: 2px;
+}
+
+#start, #reset {
+  background-color: lightgray;
+}
+
+
+/* Display */
+#display-number {
+  background-color: black;
+  width: 140px;
+  height: 140px;
+  position: relative;
+  z-index: 99;
+  top: -270;
+  left: 570;
+  /*margin-left: 450px;
+  margin-top: -250px;*/
+  border-radius: 75px;
+  padding-top: 50px;
+  color: white;
+  font-size: 28px;
+}

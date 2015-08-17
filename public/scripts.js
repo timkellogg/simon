@@ -6,8 +6,10 @@ window.onload = function() {
   var redButton    = document.getElementById("red"),
       greenButton  = document.getElementById("green"),
       blueButton   = document.getElementById("blue"),
-      orangeButton = document.getElementById("orange");
-
+      orangeButton = document.getElementById("orange"),
+      start        = document.getElementById("start"),
+      displayNum   = document.getElementById("display-number"),
+      reset        = document.getElementById('reset');
   var allButtons   = [redButton, greenButton, blueButton, orangeButton];
 
   // audio mappings
@@ -39,26 +41,33 @@ window.onload = function() {
     audioGreen.play();
   });
 
+  start.addEventListener("click", function() {
+    createNewSeq();
+  });
+
   var createNewSeq = function () {
 
-    // play old sequence
-    sequence.forEach(function(element) {
-      element.click();
-      element.addEventListener("end", function() {
-        return;
-      });
-    });
-
     // randomly select from allButtons
-    var nextAudio = sequence.randEl();
+    var nextAudio = allButtons.randEl();
 
     // add that element to sequence
     sequence.push(nextAudio);
 
+    updateDisplay();
+    // play sequence
+    sequence.forEach(function(element) {
+
+    });
+
+
+  };
+
+  // function that updates display to show how long sequence is
+  var updateDisplay = function () {
+    displayNum.innerHTML = sequence.length;
   };
 
   // function that reads in user input
-
 
   // function that compares the user input to the created sequence
 
